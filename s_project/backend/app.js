@@ -11,7 +11,7 @@ const pool = new Pool({
 
 app.get('/', async (req, res) => {
   const result = await pool.query('SELECT NOW()');
-  res.json({ status: "Backend working", time: result.rows[0] });
+  res.json({ status: "Backend not  working", time: result.rows[0] });
 });
 
 app.listen(5000, () => console.log("Backend running on 5000"));
